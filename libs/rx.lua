@@ -133,6 +133,7 @@ end
 ---@param onNext function Called when the Observable produces a value.
 ---@param onError function Called when the Observable terminates due to an error.
 ---@param onCompleted function Called when the Observable completes normally.
+---@return Observable
 function Observable:subscribe(onNext, onError, onCompleted)
 	if type(onNext) == 'table' then
 		return self._subscribe(onNext)
@@ -296,6 +297,7 @@ end
 ---Subscribes to this Observable and prints values it produces.
 ---@param name string Prefixes the printed messages with a name.
 ---@param formatter function formatter A function that formats one or more values to be printed.
+---
 function Observable:dump(name, formatter)
 	name = name and (name .. ' ') or ''
 	formatter = formatter or tostring
@@ -772,6 +774,49 @@ function Observable:distinct()
 		end
 
 		return self:subscribe(onNext, onError, onCompleted)
+	end)
+end
+---call observer in go context. Used sheduler
+function Observable:go(scheduler)
+	return self:delay(0,scheduler)
+end
+
+---@param scheduler Scheduler
+---@return Observable
+function Observable:go_distinct(scheduler)
+	local values = {}
+	local need_clean = false --clean only if it have values
+	local o1 = Observable.create(function(observer)
+		local function onNext(x)
+			if not values[x] then
+				need_clean = true
+				values[x] = true
+				observer:onNext(x)
+			end
+		end
+		local function onError(e)
+			return observer:onError(e)
+		end
+		local function onCompleted()
+			return observer:onCompleted()
+		end
+		return self:subscribe(onNext, onError, onCompleted)
+	end):delay(0,scheduler)
+
+	return o1.create(function(observer)
+		local function onNext(x)
+			if need_clean then
+				values = {}
+			end
+			observer:onNext(x)
+		end
+		local function onError(e)
+			return observer:onError(e)
+		end
+		local function onCompleted()
+			return observer:onCompleted()
+		end
+		return o1:subscribe(onNext, onError, onCompleted)
 	end)
 end
 

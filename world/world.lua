@@ -20,9 +20,12 @@ end
 
 local frame = 0
 function M:update(dt, no_save)
-	self.ecs_world:update(dt*self.time_scale)
-	self.rx:onNext(frame)
-	frame = frame + 1
+	self.ecs_world:update(dt)
+	for i=1,22 do
+		self.rx:onNext(frame)
+		--print("frame1:" .. frame)
+	--	frame = frame + 1
+	end
 end
 
 function M:dispose()

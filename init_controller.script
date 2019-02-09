@@ -5,6 +5,7 @@ COMMON.LOG.toggle_print()
 COMMON.LOG.override_print()
 math.randomseed(os.time())
 local RX = require "libs.rx"
+local WORLD = require "world.world"
 
 
 if not defos then
@@ -38,6 +39,7 @@ end
 function update(self, dt)
     RX.MainScheduler:update(dt)
     SM:update(dt)
+    WORLD:update(dt)
 end
 
 function final(self)
