@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="api">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/development/Defold/api1_2_145.zip!/api" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

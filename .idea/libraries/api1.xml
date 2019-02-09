@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="api1" type="Lua">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../api1_2_145.zip!/api" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

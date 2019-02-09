@@ -1,0 +1,45 @@
+images {
+  image: "/assets/images/empty.png"
+}
+images {
+  image: "/assets/images/white.png"
+}
+images {
+  image: "/assets/images/game/meteor/spaceMeteors_004.png"
+}
+images {
+  image: "/assets/images/game/meteor/room.png"
+}
+images {
+  image: "/assets/images/game/build.png"
+}
+images {
+  image: "/assets/images/game/backgrounds/Parallax100.png"
+}
+images {
+  image: "/assets/images/game/backgrounds/Parallax60.png"
+}
+images {
+  image: "/assets/images/game/backgrounds/Parallax80.png"
+}
+images {
+  image: "/assets/images/game/meteor/asteroid.png"
+}
+images {
+  image: "/assets/images/game/m3/exp_m3.png"
+}
+images {
+  image: "/assets/images/game/m3/repair_m3.png"
+}
+images {
+  image: "/assets/images/game/m3/tech_m3.png"
+}
+images {
+  image: "/assets/images/game/m3/time_m3.png"
+}
+images {
+  image: "/assets/images/game/m3/border_m3.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0
