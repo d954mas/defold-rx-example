@@ -1,4 +1,4 @@
-name: "logo"
+name: "logo2"
 instances {
   id: "scene_controller"
   prototype: "/libs/sm/go/scene_controller.go"
@@ -26,7 +26,7 @@ embedded_instances {
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
   "  data: \"tile_set: \\\"/assets/images/game/game.atlas\\\"\\n"
-  "default_animation: \\\"wall1\\\"\\n"
+  "default_animation: \\\"purplestone\\\"\\n"
   "material: \\\"/assets/materials/sprite_nearest.material\\\"\\n"
   "blend_mode: BLEND_MODE_ALPHA\\n"
   "\"\n"

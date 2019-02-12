@@ -123,6 +123,7 @@ local function unload_scene(self,scene,new_scene)
     COMMON.i("release input for scene:" .. scene._name, TAG)
     msg.post(scene._url,COMMON.HASHES.INPUT_RELEASE_FOCUS)
     if scene._state == STATES.RUNNING then
+        scene_transition(self,scene,scene._TRANSITIONS.ON_HIDE)
         pause(self,scene)
     end
     local modal = new_scene and new_scene._config.modal

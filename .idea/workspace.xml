@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3c62f91f-e262-404b-a264-56f876977135" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/game/game.atlas" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/game/game.atlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.collection" beforeDir="false" afterPath="$PROJECT_DIR$/init.collection" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/init_controller.script" beforeDir="false" afterPath="$PROJECT_DIR$/init_controller.script" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/rx.lua" beforeDir="false" afterPath="$PROJECT_DIR$/libs/rx.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/sm/scene_manager.lua" beforeDir="false" afterPath="$PROJECT_DIR$/libs/sm/scene_manager.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/logo/logo.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/logo/logo.collection" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/logo/logo_scene.lua" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/logo/logo_scene.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/world.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/world.lua" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,10 +19,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/libs/rx.lua">
+        <entry file="file://$PROJECT_DIR$/scenes/logo/logo_scene.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3">
-              <caret line="781" column="3" lean-forward="true" selection-start-line="781" selection-start-column="3" selection-end-line="781" selection-end-column="3" />
+            <state relative-caret-position="425">
+              <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -36,7 +38,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>---@description</find>
       <find>-</find>
       <find>@description</find>
       <find>Subv</find>
@@ -61,11 +62,12 @@
       <find>on_tr</find>
       <find>transiti</find>
       <find>debug_level</find>
-      <find>pprint</find>
       <find>Observable</find>
       <find>subscription</find>
-      <find>go_d</find>
       <find>_subscribe</find>
+      <find>go_d</find>
+      <find>pprint</find>
+      <find>logo</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -119,20 +121,21 @@
         <option value="$PROJECT_DIR$/modals/text_modal/text_modal.lua" />
         <option value="$PROJECT_DIR$/libs/hashes.lua" />
         <option value="$PROJECT_DIR$/libs/sm/scene.lua" />
-        <option value="$PROJECT_DIR$/libs/sm/scene_manager.lua" />
         <option value="$PROJECT_DIR$/libs/log.lua" />
         <option value="$PROJECT_DIR$/libs/common.lua" />
         <option value="$PROJECT_DIR$/libs/sm/go/scene_controller.script" />
-        <option value="$PROJECT_DIR$/init_controller.script" />
         <option value="$PROJECT_DIR$/world/world.lua" />
-        <option value="$PROJECT_DIR$/scenes/logo/logo_scene.lua" />
         <option value="$PROJECT_DIR$/libs/rx.lua" />
+        <option value="$PROJECT_DIR$/init_controller.script" />
+        <option value="$PROJECT_DIR$/scenes/logo2/logo2_scene.lua" />
+        <option value="$PROJECT_DIR$/libs/sm/scene_manager.lua" />
+        <option value="$PROJECT_DIR$/scenes/logo/logo_scene.lua" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="59" />
+    <option name="x" value="147" />
+    <option name="y" value="239" />
     <option name="width" value="1462" />
     <option name="height" value="951" />
   </component>
@@ -189,7 +192,7 @@
       <workItem from="1548186468765" duration="6171000" />
       <workItem from="1549395782805" duration="1237000" />
       <workItem from="1549710050853" duration="318000" />
-      <workItem from="1549710412806" duration="7344000" />
+      <workItem from="1549710412806" duration="10399000" />
     </task>
     <task id="LOCAL-00001" summary="sm">
       <created>1548882386568</created>
@@ -202,7 +205,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65924000" />
+    <option name="totallyTimeSpent" value="68979000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -214,7 +217,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="59" width="1462" height="951" extended-state="0" />
+    <frame x="147" y="239" width="1462" height="951" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3122333" />
@@ -316,7 +319,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scenes/game/go/room/room.script" />
     <entry file="file://$PROJECT_DIR$/assets/images/gui/gui.atlas">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -459,13 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/sm/scene_manager.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="102" column="14" lean-forward="true" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/sm/scene.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -487,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init_controller.script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/world/world.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
@@ -501,17 +489,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scenes/logo/logo_scene.lua">
+    <entry file="file://$PROJECT_DIR$/scenes/logo2/logo2_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="192">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/rx.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="781" column="3" lean-forward="true" selection-start-line="781" selection-start-column="3" selection-end-line="781" selection-end-column="3" />
+        <state relative-caret-position="-257">
+          <caret line="1931" column="14" selection-start-line="1931" selection-start-column="8" selection-end-line="1931" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init_controller.script">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/sm/scene_manager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="123" column="46" lean-forward="true" selection-start-line="123" selection-start-column="45" selection-end-line="123" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scenes/logo/logo_scene.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
         </state>
       </provider>
     </entry>

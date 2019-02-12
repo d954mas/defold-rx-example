@@ -1,23 +1,18 @@
 local BaseScene = require "libs.sm.scene"
-local Scene = BaseScene:subclass("LogoScene")
+
 local SM = require "libs.sm.sm"
 local WORLD = require "world.world"
 local RX = require "libs.rx"
 local SCHEDULER = RX.CooperativeScheduler.create()
 local COMMON = require "libs.common"
---- Constructor
--- @param name Name of scene.Must be unique
+
+---@class LogoScene:Scene
+local Scene = BaseScene:subclass("LogoScene")
 function Scene:initialize()
     BaseScene.initialize(self, "LogoScene", "/logo#proxy", "logo:/scene_controller")
 end
 
 function Scene:on_show(input)
-    WORLD.rx:go_distinct(SCHEDULER):subscribe(function (frame)
-        print("frame2:" .. frame)
-    end)
-    WORLD.rx:go(SCHEDULER):subscribe(function (frame)
-        print("frame3:" .. frame)
-    end)
 end
 
 function Scene:final(go_self)
@@ -28,9 +23,21 @@ function Scene:update(go_self, dt)
 end
 
 function Scene:on_transition(transition)
-    print("Transition:" .. tostring(msg.url()))
-    for i=1,60 do
-        coroutine.yield()
+    if transition == self._TRANSITIONS.ON_SHOW then
+        go.set("/go#sprite","tint.w",0)
+        go.animate("/go#sprite","tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_LINEAR,1)
+        for i=1,60 do
+            coroutine.yield()
+        end
+        SCHEDULER:schedule(function()
+            SM:show("LogoScene2")
+        end,0.2)
+    elseif transition == self._TRANSITIONS.ON_HIDE then
+        print("HIDE")
+        go.animate("/go#sprite","tint.w",go.PLAYBACK_ONCE_FORWARD,0,go.EASING_LINEAR,1)
+        for i=1,60 do
+            coroutine.yield()
+        end
     end
 end
 

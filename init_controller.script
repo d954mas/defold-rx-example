@@ -22,6 +22,7 @@ end
 
 local scenes = {
     require "scenes.logo.logo_scene",
+    require "scenes.logo2.logo2_scene",
 }
 function init(self)
     COMMON.input_acquire()
