@@ -1,5 +1,5 @@
 [project]
-title = LD44
+title = RX
 version = 0.1
 dependencies = https://github.com/subsoap/defos/archive/master.zip
 custom_resources = 

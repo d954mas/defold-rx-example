@@ -13,6 +13,13 @@ function Scene:initialize()
 end
 
 function Scene:on_show(input)
+    print("ON SHOW")
+    WORLD.rx:go(SCHEDULER):subscribe(function(v)
+        print("all:" .. v)
+    end)
+    WORLD.rx:go_distinct(SCHEDULER):subscribe(function(v)
+        print("distinct:" .. v)
+    end)
 end
 
 function Scene:final(go_self)
@@ -23,7 +30,7 @@ function Scene:update(go_self, dt)
 end
 
 function Scene:on_transition(transition)
-    if transition == self._TRANSITIONS.ON_SHOW then
+    --[[if transition == self._TRANSITIONS.ON_SHOW then
         go.set("/go#sprite","tint.w",0)
         go.animate("/go#sprite","tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_LINEAR,1)
         for i=1,60 do
@@ -38,7 +45,7 @@ function Scene:on_transition(transition)
         for i=1,60 do
             coroutine.yield()
         end
-    end
+    end--]]
 end
 
 return Scene
